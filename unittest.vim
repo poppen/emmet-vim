@@ -1126,5 +1126,71 @@ finish
     },
   ],
   'dummy': "}}}"},
+{ 'test-javascriptreact': "{{{",
+  'type': 'javascriptreact',
+  'categories': [
+    {
+      'name': 'expand abbreviation',
+      'tests': [
+        {
+          'query': "img$$$$\\<c-y>,$$$$",
+          'result': "<img src=\"\" alt=\"\" />",
+        },
+        {
+          'query': "span.my-span$$$$\\<c-y>,$$$$",
+          'result': "<span className=\"my-span\"></span>",
+        },
+        {
+          'query': "function() { return span.my-span$$$$\\<c-y>,$$$$; }",
+          'result': "function() { return <span className=\"my-span\"></span>; }",
+        },
+      ],
+    },
+  ],
+  'dummy': "}}}"},
+{ 'test-tsx': "{{{",
+  'type': 'typescript.tsx',
+  'categories': [
+    {
+      'name': 'expand abbreviation',
+      'tests': [
+        {
+          'query': "img$$$$\\<c-y>,$$$$",
+          'result': "<img src=\"\" alt=\"\" />",
+        },
+        {
+          'query': "span.my-span$$$$\\<c-y>,$$$$",
+          'result': "<span className=\"my-span\"></span>",
+        },
+        {
+          'query': "function() { return span.my-span$$$$\\<c-y>,$$$$; }",
+          'result': "function() { return <span className=\"my-span\"></span>; }",
+        },
+      ],
+    },
+  ],
+  'dummy': "}}}"},
+{ 'test-typescriptreact': "{{{",
+  'type': 'typescriptreact',
+  'categories': [
+    {
+      'name': 'expand abbreviation',
+      'tests': [
+        {
+          'query': "img$$$$\\<c-y>,$$$$",
+          'result': "<img src=\"\" alt=\"\" />",
+        },
+        {
+          'query': "span.my-span$$$$\\<c-y>,$$$$",
+          'result': "<span className=\"my-span\"></span>",
+        },
+        {
+          'query': "function() { return span.my-span$$$$\\<c-y>,$$$$; }",
+          'result': "function() { return <span className=\"my-span\"></span>; }",
+        },
+      ],
+    },
+  ],
+  'dummy': "}}}"},
 ]
 " vim:set et fdm=marker:
