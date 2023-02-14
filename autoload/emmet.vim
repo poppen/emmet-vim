@@ -402,7 +402,7 @@ function! emmet#getFileType(...) abort
     let type = 'javascript'
   elseif type =~? '^tsx'
     let type = 'tsx'
-  elseif type =~? '^ts\w' || type =~? '^typescript'
+  elseif (type =~? '^ts\w' || type =~? '^typescript') && !(&filetype =~? 'tsx')
     let type = 'typescript'
   elseif type =~? '^xml'
     let type = 'xml'
