@@ -394,13 +394,15 @@ function! emmet#getFileType(...) abort
     let type = 'css'
   elseif type =~? '^html'
     let type = 'html'
+  elseif (&filetype == 'javascriptreact' || &filetype == 'typescriptreact')
+    let type = &filetype
   elseif type =~? '^jsx'
     let type = 'jsx'
-  elseif (type =~? '^js\w' || type =~? '^javascript') && !(&filetype =~? 'jsx' || &filetype =~? 'javascriptreact')
+  elseif (type =~? '^js\w' || type =~? '^javascript') && !(&filetype =~? 'jsx')
     let type = 'javascript'
   elseif type =~? '^tsx'
     let type = 'tsx'
-  elseif type =~? ('^ts\w' || type =~? '^typescript') && !(&filetype =~? 'typescriptreact')
+  elseif type =~? '^ts\w' || type =~? '^typescript'
     let type = 'typescript'
   elseif type =~? '^xml'
     let type = 'xml'
